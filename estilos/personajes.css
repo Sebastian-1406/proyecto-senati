@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Simpsonfont';
+    src: url('../Fuente/Homer_Simpson.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: "Simpsonfont";
+}
+
+.contenedor {
+    display: grid;
+    align-items: center;
+    padding: 100px 0;
+    position: relative;
+}
+.contenedor .imagen {
+    text-align: center;
+}
+.contenedor .imagen img {
+    vertical-align: middle;
+    width: 100%;
+    max-width: 200px;
+}
+
+.icono-atras {
+    display: block;
+    width: 30px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    background-color: #248;
+}
+.contenedor-personaje {
+    text-align: center;
+}
+.contenedor-personaje h2{
+    color: #1de4c9be;
+    font-size: 3em;
+    line-height: 0.5em;
+    border-bottom: 2px dashed #0007;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contenedor-informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: 2em;
+}
+.contenedor-informacion .detalles {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor-informacion .detalles li span{
+    color: #248;
+    font-size: 1em;
+    display: block;
+}
+
+.contenedor-informacion .relacion {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contenedor-informacion .relacion a{
+    border: 2px solid #248;
+    color: #248;
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    transition: border 0.5s ease-in;
+
+}
+
+.contenedor-informacion .relacion a:hover{
+    color: #BF00FF;
+    transition: border, color 0.5s ease-in;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 2px #0002;
+}
+
+@media screen and (min-width: 670px){
+    .contenedor {
+        grid-template-columns:1fr 1fr;
+    }
+    .contenedor .imagen img {
+        max-width: 250px;
+    }
+    .contenedor-informacion .relacion {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+@media screen and (min-width: 1200px){
+    .contenedor-personaje h2 {
+        font-size: 4em;
+        padding-bottom: 15px;
+        margin-bottom: 0.5em;
+    }
+    .contenedor-personaje {
+        text-align: left;
+    }
+    .contenedor {
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    .contenedor .imagen img {
+        max-width: 300px;
+    }
+    .contenedor-personaje {
+        grid-column: 2 / 4;
+    }
+    .contenedor-informacion {
+        flex-direction: row
+    }
+    .contenedor-informacion .detalles {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contenedor-informacion .detalles li {
+        width: 50%;
+    }
+    .contenedor-informacion .detalles li span{
+        display: inline-block;
+        margin-left: 5px;
+
+    }
+}
